@@ -37,6 +37,7 @@ We noticed that the latest BLAST+ versions do not seem to compile with icc or mp
 When compiling, you have two options. You can either use mpiicc & mpiicpc or icc & icpc 
 Depending on your system configurations: 
 For SGI system you may need to load the intel-mpi complier module if not loaded. If loaded skip to step 7, if unsure perform steps 4 -6.
+
 4. To see what modules are loaded, perform
 $ module list
 If the intel-mpi module is loaded skip to step 7 if not loaded:
@@ -95,10 +96,9 @@ $vi Makefile.mk and edit by Changing the -O2 flag on lines 93 and 94 to -O3 -mmi
 Provide the path to NCBI data tools by exporting it in the environment 
 $ export NCBI_DATATOOL_PATH=<PATH$/ncbi-blast-2.2.30+-src/icc/ReleaseMT/bin or export NCBI_DATATOOL_PATH=/ncbi-blast-2.2.30+-src/mpiicc/ReleaseMT/bin
 
-Make the following modifications in /ncbi-blast-2.2.31+-src/c++/include/ and edit corelib/ncbifloat.h  on line 71
-#  if __cplusplus $= 201103L && defined(_GLIBCXX_CONSTEXPR)
-Add 
-&&! defined (__MIC__)
+Make the following modifications in /ncbi-blast-2.2.31+-src/c++/include/ and edit corelib/ncbifloat.h  on line 71 by adding &&! defined (__MIC__)
+
+#  if __cplusplus $= 201103L && defined(_GLIBCXX_CONSTEXPR) &&! defined (__MIC__)
 
 
 
@@ -108,7 +108,7 @@ $ make all_r or make -k all_r -j8
 Look in bin for executables.
 
 #################################
-## Installing newer versions of anaconda
+## Installing Anaconda
 ##################################
 
  Downloading (Anaconda3 is recommended although 2 would work as well). 
