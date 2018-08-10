@@ -111,9 +111,7 @@ Look in bin for executables.
  Downloading (Anaconda3 is recommended although 2 would work as well: https://repo.anaconda.com/archive/Anaconda3-5.2.0-Linux-x86_64.sh). 
 1.	$ wget https://repo.anaconda.com/archive/Anaconda3-5.2.0-Linux-x86_64.sh 
 
-#bash Anaconda3-5.2.0-Linux-x86_64.sh ## takes about 10 mins for all packages to install
-## need to start a new terminal after installation is complete
-#
+#bash Anaconda3-5.2.0-Linux-x86_64.sh ## takes about 10 mins for all packages to install. You need to start a new terminal after installation is complete.
 -	Installer prompts “In order to continue the installation process, please review the license agreement.” Click Enter
 -	Scroll to the bottom of the license terms and enter “Yes” to agree.
 -	The installer prompts you to click Enter to accept the default install location, CTRL-C to cancel the installation, or specify an alternate installation directory. If you accept the default install location, the installer displays “PREFIX=/home/<user>/anaconda<2 or 3>” and continues the installation. It may take a few minutes to complete.
