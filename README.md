@@ -17,8 +17,8 @@ You can also click download zip to have seqCAB in your download directory.
 ## Compiling BLAST+ 
 #############################
 
-1. Download NCBI BLAST from NCBI site
-$ wget ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/2.2.31/ncbi-blast-2.2.31+-src.tar.gz
+1. Download NCBI BLAST from NCBI site (ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/2.2.31/ncbi-blast-2.2.31+-src.tar.gz)  
+$ wget ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/2.2.31/ncbi-blast-2.2.31+-src.tar.gz 
 
 2. Uncompress the tar file:
 $ tar xvzf ncbi-blast-2.2.31+-src.tar.gz
@@ -108,7 +108,7 @@ Look in bin for executables.
 ## Installing Anaconda
 ##################################
 
- Downloading (Anaconda3 is recommended although 2 would work as well). 
+ Downloading (Anaconda3 is recommended although 2 would work as well: https://repo.anaconda.com/archive/Anaconda3-5.2.0-Linux-x86_64.sh). 
 1.	$ wget https://repo.anaconda.com/archive/Anaconda3-5.2.0-Linux-x86_64.sh 
 
 #bash Anaconda3-5.2.0-Linux-x86_64.sh ## takes about 10 mins for all packages to install
