@@ -93,14 +93,11 @@ Or
 3. Change directory to ReleaseMT/build
 $vi Makefile.mk and edit by Changing the -O2 flag on lines 93 and 94 to -O3 -mmic, and on 98 change -O to -O3 -mmic.
 
-Provide the path to NCBI data tools by exporting it in the environment 
+4.Provide the path to NCBI data tools by exporting it in the environment 
 $ export NCBI_DATATOOL_PATH=<PATH$/ncbi-blast-2.2.30+-src/icc/ReleaseMT/bin or export NCBI_DATATOOL_PATH=/ncbi-blast-2.2.30+-src/mpiicc/ReleaseMT/bin
 
-Make the following modifications in /ncbi-blast-2.2.31+-src/c++/include/ and edit corelib/ncbifloat.h  on line 71 by adding &&! defined (__MIC__)
-
-#  if __cplusplus $= 201103L && defined(_GLIBCXX_CONSTEXPR) &&! defined (__MIC__)
-
-
+5.Make the following modifications in /ncbi-blast-2.2.31+-src/c++/include/ and edit corelib/ncbifloat.h  on line 71 by adding &&! defined (__MIC__)
+#if __cplusplus $= 201103L && defined(_GLIBCXX_CONSTEXPR) &&! defined (__MIC__)
 
 4. Change directory to ReleasePHI/build and run
 $ make all_r or make -k all_r -j8 
