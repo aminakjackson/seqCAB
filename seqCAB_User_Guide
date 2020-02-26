@@ -187,3 +187,4 @@ Though the order of the input file and directory are fixed, the order in which f
 
 Automated version of the Annotation feature
 To save additional time, the Annotation and Taxonomy steps can be automated, i.e., run simultaneously with the BLAST homology search (seqCAB.py), by assigning the -L flag, followed by the aforementioned user-assigned flags, within the seqCAB.py job submission script, to calls the automated version ‘seqCAB_annotation1.py’.
+
